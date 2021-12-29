@@ -1,6 +1,6 @@
-import React from 'react'
-import Context2 from '../ctx/context2'
-import { useFlash } from "../../_shared/useFlash";
+import React from 'react';
+import useFlash from "../../_shared/useFlash";
+import Context2 from '../ctx/context2';
 
 // ##################################################################################
 // # example component consuming ctx
@@ -19,8 +19,5 @@ const LastName = props => {
     )
 }
 
-LastName.propTypes = {
-
-}
-
+LastName.whyDidYouRender = true
 export default LastName

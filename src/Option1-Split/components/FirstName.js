@@ -1,6 +1,6 @@
-import React from 'react'
-import Context1 from '../ctx/context1'
-import { useFlash } from "../../_shared/useFlash";
+import React from 'react';
+import useFlash from "../../_shared/useFlash";
+import Context1 from '../ctx/context1';
 
 
 // ##################################################################################
@@ -20,8 +20,5 @@ const FirstName = props => {
     )
 }
 
-FirstName.propTypes = {
-
-}
-
+FirstName.whyDidYouRender = true
 export default FirstName

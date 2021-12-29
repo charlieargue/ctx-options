@@ -5,4 +5,5 @@ import React from 'react'
 // ##################################################################################
 const Context2 = React.createContext()
 Context2.displayName = 'Context #2'
+Context2.whyDidYouRender = true
 export default Context2

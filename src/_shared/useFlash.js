@@ -3,7 +3,7 @@ import React, { useDebugValue } from 'react'
 // ##################################################################################
 // # FLASHES during re-render
 // ##################################################################################
-export const useFlash = () => {
+const useFlash = () => {
   useDebugValue('Use Flash Hook');
 
   const ref = React.useRef();
@@ -18,3 +18,5 @@ export const useFlash = () => {
   });
   return ref;
 };
+useFlash.whyDidYouRender = true
+export default useFlash
