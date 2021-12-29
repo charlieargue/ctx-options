@@ -2,12 +2,13 @@ import React from 'react'
 import NotConsumer from '../_shared/NotConsumer'
 import FirstName from './components/FirstName'
 import LastName from './components/LastName'
-import Provider from './ctx/provider'
+import Provider from './rt/provider'
 
 // ##################################################################################
-// # BARE BONES Context scenario illustrating PROBLEM
+// # OPTION #4 - react-tracked
+//   https://github.com/dai-shi/react-tracked
 // ##################################################################################
-const Problem = props => {
+const Option4ReactTracked = props => {
     return (
         <Provider>
             <FirstName />
@@ -19,4 +20,4 @@ const Problem = props => {
     )
 }
 
-export default Problem
+export default Option4ReactTracked
