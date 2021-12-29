@@ -1,13 +1,13 @@
-import Problem from './Problem'
+// import Problem from './Problem'
 // import Option1Split from './Option1-Split'
-// import Option2Containers from './Option2-Containers'
+import Option2Containers from './Option2-Containers'
 
 function App() {
   return (
     <>
-      <Problem />
+      {/* <Problem /> */}
       {/* <Option1Split /> */}
-      {/* <Option2Containers /> */}
+      <Option2Containers />
       {/* <Option3-RT /> */}
     </>
   )

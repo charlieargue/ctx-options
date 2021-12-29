@@ -1,26 +1,31 @@
-import React from 'react'
-import { Context } from '../ctx/context'
+import React from 'react';
 import useFlash from "../../_shared/useFlash";
 
-// ##################################################################################
-// # example component consuming ctx
-// ##################################################################################
-const LastName = props => {
 
-    const [state, dispatch] = React.useContext(Context)
+// ##################################################################################
+// # "dumb" component ..... 
+//    • 🔥 React.memo-ized!
+//    • 🔥 DOES NOT CONSUME ctx
+// ##################################################################################
+const LastName = React.memo(({ lastName, setLastName }) => {
+
     return (
-        <div ref={useFlash()}>
-            Last Name:
-            <input
-                value={state.lastName}
-                onChange={(event) => dispatch({ type: 'setLastName', lastName: event.target.value })} />
-            {/* {Math.random()} */}
+        <div style={{
+            border: '1px solid red',
+            borderRadius: '2px',
+            marginTop: '6px',
+            padding: '2px',
+        }}>
+            <div ref={useFlash()}>
+                Last Name:
+                <input
+                    value={lastName}
+                    onChange={(event) => setLastName(event.target.value)} />
+                {Math.random()}
+            </div>
         </div>
     )
-}
+})
 
-LastName.propTypes = {
-
-}
-
+LastName.whyDidYouRender = true
 export default LastName
