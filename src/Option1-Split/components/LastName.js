@@ -14,7 +14,7 @@ const LastName = props => {
             <input
                 value={state.lastName}
                 onChange={(event) => dispatch({ type: 'setLastName', lastName: event.target.value })} />
-            {/* {Math.random()} */}
+            {Math.random()}
         </div>
     )
 }

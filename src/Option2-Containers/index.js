@@ -1,8 +1,8 @@
 import React from 'react'
-import NotConsumer from '../_shared/NotConsumer'
+import Provider from './ctx/provider'
 import FirstName from './components/FirstName'
 import LastName from './components/LastName'
-import Provider from './ctx/provider'
+import NotConsumer from '../_shared/NotConsumer'
 
 // ##################################################################################
 // # BARE BONES Context scenario illustrating PROBLEM
