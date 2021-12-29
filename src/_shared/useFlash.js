@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useDebugValue } from 'react'
 
 // ##################################################################################
 // # FLASHES during re-render
 // ##################################################################################
 export const useFlash = () => {
+  useDebugValue('Use Flash Hook');
+
   const ref = React.useRef();
   React.useEffect(() => {
     ref.current.setAttribute(
