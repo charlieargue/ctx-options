@@ -1,12 +1,14 @@
+import Problem from './Problem'
 
 function App() {
   return (
-    <div >
-      <header>
-        Yo dawg
-      </header>
-    </div>
-  );
+    <>
+      <Problem />
+      {/* <Option1-Split />
+    <Option2-Containers />
+    <Option3-RT /> */}
+    </>
+  )
 }
 
-export default App;
+export default App
