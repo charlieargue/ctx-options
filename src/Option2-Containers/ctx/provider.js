@@ -1,6 +1,6 @@
 import React from 'react'
 import { reducer } from './reducer'
-import { Context } from './context'
+import Context from './context'
 
 // ##################################################################################
 // # PROVIDER
@@ -18,8 +18,5 @@ const Provider = ({ children }) => {
     )
 }
 
-Provider.propTypes = {
-
-}
-
+Provider.whyDidYouRender = true
 export default Provider

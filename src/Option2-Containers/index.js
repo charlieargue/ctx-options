@@ -1,7 +1,7 @@
 import React from 'react'
 import Provider from './ctx/provider'
-import FirstName from './components/FirstName'
-import LastName from './components/LastName'
+import FirstNameContainer from './components/FirstNameContainer'
+import LastNameContainer from './components/LastNameContainer'
 import NotConsumer from '../_shared/NotConsumer'
 
 // ##################################################################################
@@ -10,17 +10,15 @@ import NotConsumer from '../_shared/NotConsumer'
 const Problem = props => {
     return (
         <Provider>
-            <FirstName />
+            <FirstNameContainer />
             <br />
-            <LastName />
+            <LastNameContainer />
             <br />
             <NotConsumer />
         </Provider>
     )
 }
 
-Problem.propTypes = {
 
-}
-
+Problem.whyDidYouRender = true
 export default Problem

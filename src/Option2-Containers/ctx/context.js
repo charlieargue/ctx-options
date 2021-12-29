@@ -3,4 +3,6 @@ import React from 'react'
 // ##################################################################################
 // # CONTEXT
 // ##################################################################################
-export const Context = React.createContext()
+const Context = React.createContext()
+Context.whyDidYouRender = true
+export default Context
