@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // 🔥 CULPRIT? 🔥 ... need to lift this to parent?? don't think that's right... n/a
 const initialState = {
-    firstName: 'Harry',
-    lastName: 'Potter',
+    firstName: 'Oliver',
+    lastName: 'Sacks',
 };
 
 // ##################################################################################
