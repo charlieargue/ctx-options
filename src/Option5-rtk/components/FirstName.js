@@ -1,19 +1,22 @@
-import React from 'react'
-import { Context } from '../ctx/context'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import useFlash from "../../_shared/useFlash";
+import { setFirstName } from '../rtk/reducer-and-actions';
 
 // ##################################################################################
-// # example component consuming ctx
+// # example component USING RTK (redux toolkit)
 // ##################################################################################
 const FirstName = props => {
 
-    const [state, dispatch] = React.useContext(Context)
+    const { firstName } = useSelector(state => state.person);
+    const dispatch = useDispatch();
+
     return (
         <div ref={useFlash()}>
             First Name:
             <input
-                value={state.firstName}
-                onChange={(event) => dispatch({ type: 'setFirstName', firstName: event.target.value })} />
+                value={firstName}
+                onChange={(event) => dispatch(setFirstName(event.target.value))} />
             {/* {Math.random()} */}
         </div>
     )
