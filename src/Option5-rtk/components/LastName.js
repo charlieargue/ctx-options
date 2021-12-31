@@ -1,14 +1,16 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import useFlash from "../../_shared/useFlash";
 import { setLastName } from '../rtk/reducer-and-actions';
+import useLastName from '../rtk/useLastName';
 
 // ##################################################################################
 // # example component USING RTK (redux toolkit)
 // ##################################################################################
 const LastName = props => {
 
-    const { lastName } = useSelector(state => state.person);
+    // 🔥 CULPRIT? 🔥 const { lastName } = useSelector(state => state.person);
+const { lastName } = useLastName();
     const dispatch = useDispatch();
 
     return (
