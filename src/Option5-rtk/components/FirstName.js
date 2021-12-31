@@ -1,15 +1,15 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import useFlash from "../../_shared/useFlash";
 import { setFirstName } from '../rtk/reducer-and-actions';
+import selectFirstName from '../rtk/selector-firstname';
 
 // ##################################################################################
 // # example component USING RTK (redux toolkit)
 // ##################################################################################
-const FirstName = ({firstName}) => {
+const FirstName = () => {
 
-    // 🔥 CULPRIT 1? 🔥 const { firstName } = useSelector(state => state.person);
-    // 🔥 CULPRIT 2? 🔥 const { firstName } = useFirstName();
+    const firstName = useSelector(selectFirstName)
     const dispatch = useDispatch();
 
     return (

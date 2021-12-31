@@ -7,3 +7,4 @@ export const selectLastName = createSelector(
   (state) => state.person,
   (person) => person.lastName
 );
+export default selectLastName;
