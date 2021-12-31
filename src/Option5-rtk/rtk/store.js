@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import personReducer from './reducer-and-actions';
+import firstNameReducer from './reducer-and-actions-firstname';
+import lastNameReducer from './reducer-and-actions-lastname';
 
+// ##################################################################################
+// # redux STORE
+// ##################################################################################
 const store = configureStore({
     reducer: {
-        person: personReducer,
-        // OR SHOULD IT RATHER BE: personName: personNameReducer, 
+        firstName: firstNameReducer,
+        lastName: lastNameReducer,
     },
 });
 
