@@ -7,10 +7,10 @@ import useLastName from '../rtk/useLastName';
 // ##################################################################################
 // # example component USING RTK (redux toolkit)
 // ##################################################################################
-const LastName = props => {
+const LastName = () => {
 
     // 🔥 CULPRIT? 🔥 const { lastName } = useSelector(state => state.person);
-const { lastName } = useLastName();
+    const { lastName } = useLastName();
     const dispatch = useDispatch();
 
     return (
@@ -24,4 +24,5 @@ const { lastName } = useLastName();
     )
 }
 
+LastName.whyDidYouRender = true;
 export default LastName

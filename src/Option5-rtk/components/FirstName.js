@@ -24,4 +24,5 @@ const FirstName = () => {
     )
 }
 
+FirstName.whyDidYouRender = true;
 export default FirstName
