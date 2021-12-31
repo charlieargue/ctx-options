@@ -2,15 +2,14 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import useFlash from "../../_shared/useFlash";
 import { setLastName } from '../rtk/reducer-and-actions';
-import useLastName from '../rtk/useLastName';
 
 // ##################################################################################
 // # example component USING RTK (redux toolkit)
 // ##################################################################################
-const LastName = () => {
+const LastName = ({ lastName }) => {
 
-    // 🔥 CULPRIT? 🔥 const { lastName } = useSelector(state => state.person);
-    const { lastName } = useLastName();
+    // 🔥 CULPRIT 1? 🔥 const { lastName } = useSelector(state => state.person);
+    // 🔥 CULPRIT 2? 🔥 const { lastName } = useLastName();
     const dispatch = useDispatch();
 
     return (
@@ -19,7 +18,7 @@ const LastName = () => {
             <input
                 value={lastName}
                 onChange={(event) => dispatch(setLastName(event.target.value))} />
-            {/* {Math.random()} */}
+            {Math.random()}
         </div>
     )
 }

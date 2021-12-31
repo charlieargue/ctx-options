@@ -10,8 +10,6 @@ import store from './rtk/store';
 // ##################################################################################
 const Option5RTK = () => {
 
-    // 🔥 CULPRIT? 🔥 or a single useSelector() goes here, grabs both fName and lName, and passes those as separate props
-    // ...... but then wouldn't this re-render upon each change to either? we don't want that... not sure... TBD
     return (
         <StoreProvider store={store}>
             <FirstName />

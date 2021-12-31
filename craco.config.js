@@ -8,17 +8,20 @@ module.exports = {
             const origBabelPresetCRA = babelLoaderOptions.presets[origBabelPresetCRAIndex];
 
             babelLoaderOptions.presets[origBabelPresetCRAIndex] = function overridenPresetCRA(api, opts, env) {
+                console.log("🚀 ~ env", env);
                 const babelPresetCRAResult = require(
                     origBabelPresetCRA[0]
                 )(api, origBabelPresetCRA[1], env);
 
                 babelPresetCRAResult.presets.forEach(preset => {
+                    console.log("🚀 ~ preset", preset);
                     // detect @babel/preset-react with {development: true, runtime: 'automatic'}
                     const isReactPreset = (
-                      preset && preset[1] &&
-                      preset[1].runtime === 'automatic' &&
-                      preset[1].development === true
+                        preset && preset[1] &&
+                        preset[1].runtime === 'automatic' &&
+                        preset[1].development === true
                     );
+                    console.log("🚀 ~ isReactPreset", isReactPreset);
                     if (isReactPreset) {
                         preset[1].importSource = '@welldone-software/why-did-you-render';
                     }
@@ -32,8 +35,8 @@ module.exports = {
     },
     // if you want to track react-redux selectors
     webpack: {
-      alias: {
-        'react-redux': process.env.NODE_ENV === 'development' ? 'react-redux/lib' : 'react-redux'
-      }
+        alias: {
+            'react-redux': process.env.NODE_ENV === 'development' ? 'react-redux/lib' : 'react-redux'
+        }
     }
 };

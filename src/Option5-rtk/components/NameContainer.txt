@@ -1,0 +1,24 @@
+// import React from 'react';
+// import { useSelector } from 'react-redux';
+// import FirstName from './FirstName';
+// import LastName from './LastName';
+
+// // ##################################################################################
+// // # NAME CONTAINER
+// // ##################################################################################
+// const NameContainer = () => {
+
+//     // 🔥 CULPRIT? 🔥 or a single useSelector() goes here, grabs both fName and lName, and passes those as separate props
+//     // ...... but then wouldn't this re-render upon each change to either? we don't want that... not sure... TBD
+//     const { firstName, lastName } = useSelector(state => state.person);
+
+//     return (
+//         <>
+//             <FirstName firstName={firstName} />
+//             <br />
+//             <LastName lastName={lastName} />
+//         </>
+//     )
+// }
+
+// export default NameContainer
