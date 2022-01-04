@@ -9,9 +9,9 @@ const initialState = {
 // ##################################################################################
 // # RTK REDUCER & person slice / ACTIONS
 // ##################################################################################
-const personSlice = createSlice({
+const personSlice = (props) => createSlice({
     name: 'person',
-    initialState,
+    props,
     reducers: {
         setFirstName: (state, action) => {
             state.firstName = action.payload;
