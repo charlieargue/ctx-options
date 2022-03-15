@@ -15,7 +15,7 @@ The original problem of context "over-rendering" is illustrated in `src/Problem`
 -   **OPTION #4:** react-tracked in `src/Option4-react-tracked`
 -   **OPTION #5:** redux toolkit (RTK) in `src/Option5-rtk`
 
-*NOTE: option #3 was `useMemo` and was skipped*
+*NOTE: This is based on [Dan Abramov's discussion of preventing re-renders](https://github.com/facebook/react/issues/15156#issuecomment-474590693). Option #3 (`useMemo`) and was skipped.*
 
 ###
 
