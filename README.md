@@ -8,6 +8,12 @@
 
 The original problem of context "over-rendering" is illustrated in `src/Problem`
 
+## Impact at Company Where I Worked:
+
+- Clarified a critical misunderstanding of **React Context**, causing dev leadership to bypass it unnecessarily and reach for other solutions (Redux) where it would suffice
+- Introduced a library for optimizing performance, fixing memory leaks, and eliminating unnecessary over-renders via [Why Did You Render](https://github.com/welldone-software/why-did-you-render) and a mix of standard solutions like `useSafeDispatch`
+- `RTK` was chosen team-wide based on this proof-of-concept, and React Context was restored as a viable and primary solution for state management (both local and global)
+
 ## Options Explored:
 
 -   **OPTION #1:** Splitting Context in `src/Option1-Split`
